@@ -1,0 +1,115 @@
+/* static/styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+}
+
+.chat-container {
+    width: 400px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.user-message, .bot-message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    word-wrap: break-word;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.user-message:hover, .bot-message:hover {
+    background-color: #a0e6a0;
+}
+
+.user-message {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.bot-message {
+    background-color: #ddd;
+}
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Adicione esta seção ao seu arquivo CSS */
+.upload-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upload-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.upload-form input[type="file"] {
+    display: none;
+}
+
+.upload-form button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.upload-form button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

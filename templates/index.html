@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>ChatBot</title>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>ChatBot</h2>
+        </div>
+        <div class="chat-body" id="chat-body">
+            {% for message in chat_history %}
+            <p class="{{ message['class'] }}">{{ message['text'] }}</p>
+            {% endfor %}
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="Digite sua pergunta...">
+            <button id="send-question">Enviar</button>
+        </div>
+    </div>
+
+    
+    <form action="/upload_pdf" method="post" enctype="multipart/form-data" class="upload-form" id="upload-form">
+        <label for="pdf_file">Enviar arquivo PDF:</label>
+        <input type="file" name="pdf_file" accept=".pdf" required>
+        <button type="submit">Enviar PDF</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
